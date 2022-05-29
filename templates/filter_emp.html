@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add an employee</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Filter AN THE EMPLOYEE</h1>
+        <form action="/filter_emp" method="POST">
+            {% csrf_token %}
+                <lable for="name">employee  FirstName/LastName</lable><br>
+            <input type="text" id="name" name="name"value="{{name}}"><br>
+          
+            <lable for="department">Department</lable><br>
+                 <input type="text" id="department" name="dept" value="{{dept}}"><br>
+                 <lable for="role">Role</lable><br>
+                 <input type="text" id="Role"name="role" value="{{role}}"><br>
+                 <label for ="phone">Phone</label>
+
+                 <input type="number" id="phone" name="phone" value="{{phone}}"><br>
+                 
+<hr>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
